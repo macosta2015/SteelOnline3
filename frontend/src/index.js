@@ -7,6 +7,9 @@ import DisplayEmails from './components/email/displayemail.js';
 import EmailSender from './components/email/emailsender.js';
 import EmailRestAPI from './components/email/EmailRestAPI.js';
 import App from './App.js';
+//New component
+import EmailManager from './components/email/EmailManager.js'; // Import the combined EmailManager component
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -28,6 +31,7 @@ function Main() {
       <EmailList emailList={emailList} setEmailList={setEmailList} onEmailAdded={handleEmailAdded} />
       {/* DisplayEmails will re-fetch whenever emailRefreshTrigger changes */}
       <DisplayEmails emailRefreshTrigger={emailRefreshTrigger} />
+      {/* <EmailManager /> Render the new combined EmailManager component */}
     </>
   );
 }
